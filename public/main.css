@@ -1,0 +1,59 @@
+body {
+  background-color: grey;
+  font-family: 'PT Sans';
+}
+
+input
+{
+  width: 20vw;
+  height: 3vw;
+  font-size: 1em;
+}
+.errors {
+  display: flex;
+  flex-flow: column;
+}
+
+button {
+  color: maroon;
+  background: grey;
+  font-size: 1em;
+  max-width: 10vw;
+  padding: 0.5vw;
+  margin: 0.5vw;
+}
+
+label {
+  margin-top: 1vw;
+}
+
+.container {
+  width: 70%;
+  margin: 5vw;
+  border: 2px dotted black;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container_header{
+  width: 90%;
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  flex-flow: column;
+  min-width: 50vw;
+  padding: 2vw;
+  list-style: none;
+}
+
+li {
+  border: 2px dotted teal;
+  padding: 1vw;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./main.css">
+    <title>Comic Books</title>
+  </head>
+  <body>
+    <div class="container">
+      {{#errors}}
+      <p>{{.}}</p>
+      {{/errors}}
+      <div class="container_header">
+        <form method="post" action="/">
+          <ul>
+            <li><input type="text" name="title" id="title" placeholder="Enter book title"></li>
+            <li><input type="text" name="author" id="author" placeholder="Enter book author"></li>
+            <li><input type="text" name="publisher" id="publisher" placeholder="Enter publisher"></li>
+            <li><input type="text" name="country" id="country" placeholder="Enter country">
+            <button name="add" id="add">Add to the list</button>
+            <input type="hidden" name="action" value="add">
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <h2>List of comic books</h2>
+
+      {{#comics}}
+      <ul>
+        <li>
+          <div class="container_header">
+            <b>{{label}}</b>
+              <form method="post" action="/index/{{_id}}/delete">
+                <button name="delete" id="delete">Delete</button>
+              </form>
+          </div>
+        </li>
+            <li>Author : {{author}} </li>
+            <li>Publisher : {{#publisher}}{{name}}{{/publisher}} </li>
+            <li>{{date}}</li></ul>
+        </li>
+      </ul>
+    {{/comics}}
+    </div>
+  </body>
+</html>
